@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>服务(services) demo</title>
+
+    <link href="css/ionic.css" rel="stylesheet">
+    
+
+    <!-- ionic/angularjs js -->
+    <script src="../lib/ionic/ionic.bundle.js"></script>
+    <!-- your app's js -->
+    <script src="../lib/app.js"></script>
+    <script src="../lib/services.js"></script>
+  </head>
+  <body ng-app="myApp" ng-controller="myCtrl"  animation="slide-left-right-ios7">
+    <div class="bar bar-header bar-balanced">
+      <button class="button button-icon icon ion-navicon"></button>
+      <div class="h1 title">页头</div>
+      <button class="button button-icon icon ion-navicon"></button>
+    </div>
+
+    <ion-nav-bar class="nav-title-slide-ios7 bar-positive">
+      <ion-nav-back-button class="button-icon ion-arrow-left-c">
+      </ion-nav-back-button>
+    </ion-nav-bar>
+
+    <ion-content class="has-header padding">
+    <br><br>
+    <h3>一个ionic+angularjs的services应用</h3>
+    <div  class="list list-inset">
+      <button class="button button-block button-light" ng-click="showMsg()">
+        点我显示消息盒子
+      </button>    
+    </div>
+    <div class="card" ng-show="flag">
+      <div class="item item-divider">
+        新消息
+      </div>
+      <div class="item item-text-wrap">
+        你好！{{user.name}}，欢迎你！
+      </div>
+      <div class="item item-divider">
+        时间：{{user.date}}
+      </div>
+    </div>
+    </ion-content>
+  </body>
+</html>
